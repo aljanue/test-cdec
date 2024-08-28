@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
 </head>
 <body>
-    <img class="logo" src="src/logo.png" alt="logo">
+    <img class="logo" src="src/images/logo.png" alt="logo">
     <div id="home-container"class="main-container">
-        <h1 class="text-white">Contesta estas preguntas y te diré tus posibilidades de entrar en el tour del c de c 2025</h1>
+        <h1 class="text-white font-bold">Contesta estas preguntas y te diré tus posibilidades de entrar en el tour del c de c 2025</h1>
         <p class="fs-5 text-white">Descubre si eres un joven creativo apto para hacer el Tour con este quiz diseñado por expertos, y recibe el brief un día antes que el resto! </p>
         <button class="fs-6 text-white" onclick="startTest('home-container', 'test-container')">comienza el test</button>
     </div>
@@ -21,30 +21,32 @@
     <div id="test-container">
         <h1 id="question"></h1>
         <div class="row">
-            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-end justify-content-center" onclick="nextAnswer()">
+            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-end justify-content-center" onclick="addResult(0);nextAnswer()">
                 <img id="option-1" class="img-fluid" src="" alt="img">
             </div>
-            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-start justify-content-center" onclick="nextAnswer()">
+            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-start justify-content-center" onclick="addResult(1);nextAnswer()">
                 <img id="option-2" class="img-fluid" src="" alt="img">
             </div>
-            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-end justify-content-center" onclick="nextAnswer()">
+            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-end justify-content-center" onclick="addResult(2);nextAnswer()">
                 <img id="option-3" class="img-fluid" src="" alt="img">
             </div>
-            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-start justify-content-center" onclick="nextAnswer()">
+            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-start justify-content-center" onclick="addResult(3);nextAnswer()">
                 <img id="option-4" class="img-fluid" src="" alt="img">
             </div>
         </div>
     </div>
 
-    <div id="result-container"></div>
+    <div id="result-container">  
+        <a id="download" href="#" class="text-white"onclick="captureAndDownload()">¡Haz clic aquí para guardarlo!</a>
+    </div>
 
 
 
-    <img id="paraguas" class="paraguas"src="src/paraguas.png" alt="paraguas">
+    <img id="paraguas" class="paraguas"src="src/images/paraguas.png" alt="paraguas">
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>

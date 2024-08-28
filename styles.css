@@ -1,5 +1,14 @@
+@font-face {
+    font-family: "Creativa-Bold";
+    src: url('src/fonts/Creativa-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: "Creativa";
+    src: url('src/fonts/Creativa-Regular.ttf') format('truetype');
+}
+
 body {
-    background-image: url("src/background.jpeg");
+    background-image: url("src/images/background.jpeg");
     background-color: #cccccc;
     display:flex;
     align-items: center;
@@ -8,8 +17,11 @@ body {
     height:100vh;
     overflow: hidden;
 }
+.font-bold{
+    font-family: 'Creativa-Bold';
+}
 *{
-    font-family: "Imprima";
+    font-family: "Creativa";
     text-align: center;
     font-weight: 400;
 }
@@ -26,7 +38,7 @@ body {
     align-items: center;
     justify-content: center;
     max-width: 80%;
-    min-width: 37%;
+    min-width: 40%;
     width: 400px;
     height: fit-content;
     gap: 20px;
@@ -79,7 +91,8 @@ body {
     font-size: 1.6rem !important;
     text-align: center;
     width: 100%;
-    font-family: "Imprima";
+    font-family: "Creativa";
+    color: rgb(17, 17, 122)
 }
 .img-fluid{
     max-height: 20vh;
@@ -88,5 +101,11 @@ body {
 
 #result-container{
     max-width: 90%;
+    max-height: 70vh;
+    display: none;
 
+}
+
+a{
+    font-size: 1.3rem;
 }
