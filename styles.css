@@ -60,6 +60,9 @@ body {
         width: 400px; 
         bottom: -15%;
     }
+    .paraguas3{
+        transform: translateY(-90vh) translateX(20vw) scale(1) rotate(210deg);
+    }
 }
 
 #test-container{
