@@ -83,6 +83,7 @@ body {
     #result-container{
         max-height: 80vh;
         overflow-y: auto;
+        align-items: start;
     }
     #result-container h1{
         position:static !important;
@@ -98,6 +99,9 @@ body {
 
     #result-container a{
         top: 110% !important;
+    }
+    #result-container button{
+        position: static !important;
     }
 }
 
