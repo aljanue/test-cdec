@@ -80,6 +80,10 @@ body {
     .paraguas3{
         transform: translateY(-860px) translateX(20vw) scale(1) rotate(210deg);
     }
+    #result-container{
+        max-height: 80vh;
+        overflow-y: auto;
+    }
     #result-container h1{
         position:static !important;
         bottom: 100%;
