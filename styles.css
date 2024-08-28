@@ -191,6 +191,10 @@ body {
     flex-direction: column;
     gap: 20px;
     padding-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 #mail-container form button{
     border-radius: 30px;
@@ -208,6 +212,7 @@ body {
     border: 1px solid black;
     height: 40px;
     width: 320px;
+    max-width: 95%;
 }
 #mail-container div{
     position: absolute;
