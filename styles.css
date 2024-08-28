@@ -65,7 +65,12 @@ body {
     transform: translateX(50vw) translateY(-50vh)  scale(0.6) rotate(-25deg);
 }
 .paraguas3{
-    transform: translateY(-98vh) scale(1) rotate(210deg);
+    transform: translateY(-890px) translateX(20vw) scale(1) rotate(210deg);
+}
+@media(max-height: 755px) {
+    .paraguas{
+        bottom: -37% !important;
+    }
 }
 @media (max-width: 767.98px) {
     .paraguas {
@@ -73,7 +78,22 @@ body {
         bottom: -15%;
     }
     .paraguas3{
-        transform: translateY(-90vh) translateX(20vw) scale(1) rotate(210deg);
+        transform: translateY(-860px) translateX(20vw) scale(1) rotate(210deg);
+    }
+    #result-container h1{
+        position:static !important;
+        bottom: 100%;
+        color:#3159CF !important;
+        font-family: "Creativa-Bold";
+        z-index: 99;
+    }
+    .logo{
+        width: 100px;
+        height: auto;
+    }
+
+    #result-container a{
+        top: 110% !important;
     }
 }
 
@@ -87,6 +107,7 @@ body {
     max-height: 70vh;
     overflow-y:auto;
 }
+
 #question{
     font-size: 1.6rem !important;
     text-align: center;
@@ -97,15 +118,197 @@ body {
 .img-fluid{
     max-height: 20vh;
     cursor: pointer;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
-#result-container{
-    max-width: 90%;
-    max-height: 70vh;
-    display: none;
+#result-container, #mail-container{
+    position: relative;
+    width: 70%;
+    background-color: white;
+    display:none;
+    display: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+}
+#result-container p{
+    margin: 0;
+    color: rgb(17, 17, 122) !important;
 
 }
-
-a{
-    font-size: 1.3rem;
+#result-container h1{
+    position: absolute;
+    bottom: 100%;
+    color: white;
+    font-family: "Creativa-Bold";
+    z-index: 99;
 }
+#result-container img{
+    width: 150px;
+}
+#result-container button {
+    background-color: #E45F5F;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: white;
+    padding: 0 30px;
+    height: 50px;
+    position: absolute;
+    top: calc(100% - 25px);
+}
+#result{
+    background-color: #E45F5F;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    padding: 20px !important;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#result-container a{
+    font-size: 0.9rem;
+    color:black;
+    position: absolute;
+    top: 120%;
+}
+
+#mail-container form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 30px;
+}
+#mail-container form button, #check-container button{
+    border-radius: 30px;
+    height: 50px;
+    background-color: #E45F5F;
+    border: 2px solid white;
+    color: white;
+    position: absolute;
+    width: 200px;
+    top: calc(100% - 25px);
+    left: calc(50% - 100px);
+}
+#mail-container form input{
+    border-radius: 30px;
+    border: 1px solid black;
+    height: 40px;
+    width: 320px;
+}
+#mail-container div{
+    position: absolute;
+    left: 0;
+    top: 40px;
+    padding: 30px 40px;
+    cursor: pointer;
+}
+#mail-container div svg{
+    width: 80px;
+    fill: rgb(28, 28, 110)
+}
+#check-container{
+    position: relative;
+    width: 70%;
+    max-height: 400px;
+    background-color: white;
+    display:none;
+    display: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+}
+
+.wrapper{
+    display:flex;
+    justify-content:center;
+    flex-direction: column;
+    align-items:center;
+    gap: 30px;  
+}
+.checkmark__circle{
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #7ac142;
+    fill: none;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+.checkmark{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    animation: fill .4s ease-in-out .4s forwards, 
+        scale .3s ease-in-out .9s both
+}
+.checkmark__check{
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+@keyframes stroke{
+    100%{stroke-dashoffset: 0}
+}
+@keyframes scale{
+    0%, 100%{transform: none}
+    50%{transform: scale3d(1.1, 1.1, 1)}
+}
+@keyframes fill{
+    100%{box-shadow: inset 0px 0px 0px 30px #7ac142}
+}
+
+  
+#check-container a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #777;
+    border: 2px solid #666;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    cursor: pointer;
+  }
+  
+  #check-container a span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--color-background-secondary);
+    transition: all .35s;
+  }
+  
+  a:hover{
+    color: #fff;
+  }
+  
+  a:hover:after{
+    width: 100%;
+  }

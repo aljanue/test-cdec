@@ -7,7 +7,7 @@ const front_options = [
     document.getElementById("option-4"),
 ];
 current_answer=0;
-result = 0;
+result = 90;
 
 const questions = [
     {
@@ -26,29 +26,29 @@ const questions = [
                 puntuation: 0.81
             },
             {
-                url: "/src/images/paris.jpeg",
-                puntuation: 2.5
+                url: "/src/images/oglivy.jpg",
+                puntuation: 2
             },
         ]
     },
     {
-        question: "¿Cuál es tu merchan favorito?",
+        question: "¿Qué merchan prefieres?",
         options: [
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images/pulsera.webp",
                 puntuation: 1.82
             },
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images/camiseta.jpg",
                 puntuation: 1.06
             },
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images/tote.jpg",
                 puntuation: 1.76
             },
             {
-                url: "/src/images/paris.jpeg",
-                puntuation: 2.5
+                url: "/src/images/tote.jpg",
+                puntuation: 2
             },
         ]
     },
@@ -56,20 +56,20 @@ const questions = [
         question: "¿Con qué exturista harías dupla creativa?",
         options: [
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images",
                 puntuation: 0.12
             },
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images",
                 puntuation: 0.65
             },
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images",
                 puntuation: 0.43
             },
             {
-                url: "/src/images/paris.jpeg",
-                puntuation: 2.5
+                url: "/src/images",
+                puntuation: 2
             },
         ]
     },
@@ -77,24 +77,44 @@ const questions = [
         question: "¿Cuál es la cocina de tus sueños?",
         options: [
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images",
                 puntuation: 0.2
             },
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images",
                 puntuation: 1.1
             },
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images",
                 puntuation: 0.3
             },
             {
-                url: "/src/images/paris.jpeg",
-                puntuation: 2.5
+                url: "/src/images",
+                puntuation: 1.9
+            },
+        ]
+    }, 
+    {
+        question: "¿Qué Housetour preferirías ver? ",
+        options: [
+            {
+                url: "/src/images",
+                puntuation: 0.42
+            },
+            {
+                url: "/src/images",
+                puntuation: 1.19
+            },
+            {
+                url: "/src/images",
+                puntuation: 0.81
+            },
+            {
+                url: "/src/images",
+                puntuation: 2
             },
         ]
     },
-    // Agrega más preguntas aquí
 ];
 
 function startTest(hide_name, show_name){
@@ -128,23 +148,26 @@ function showAnswer(){
         front_options[i].src = questions[current_answer].options[i].url;
     }
 }
-function showResult(){
-    nextContainer("test-container", "result-container");
+function showResult(container){
+    nextContainer(container, "result-container");
+    document.getElementById("result").textContent=result.toFixed(1)+'%';
 }
-
+function goBack(container){
+    nextContainer(container, "home-container");
+    puntuation = 0;
+}
 function nextAnswer(){
     current_answer++;
     if(current_answer < questions.length)
         showAnswer();
     else{
-        showResult();
+        showResult('test-container');
         moveSticker(2);
     }
 }
 
 function addResult(x){
     result+=questions[current_answer].options[x].puntuation;
-    console.log(result);
 }
 
 
