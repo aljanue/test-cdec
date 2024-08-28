@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test c de c</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="logo" src="src/logo.png" alt="logo">
+    <div id="home-container"class="main-container">
+        <h1 class="text-white">Contesta estas preguntas y te diré tus posibilidades de entrar en el tour del c de c 2025</h1>
+        <p class="fs-5 text-white">Descubre si eres un joven creativo apto para hacer el Tour con este quiz diseñado por expertos, y recibe el brief un día antes que el resto! </p>
+        <button class="fs-6 text-white" onclick="startTest('home-container', 'test-container')">comienza el test</button>
+    </div>
+    
+    <div id="test-container">
+        <h1 id="question"></h1>
+        <div class="row">
+            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-end justify-content-center" onclick="nextAnswer()">
+                <img id="option-1" class="img-fluid" src="" alt="img">
+            </div>
+            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-start justify-content-center" onclick="nextAnswer()">
+                <img id="option-2" class="img-fluid" src="" alt="img">
+            </div>
+            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-end justify-content-center" onclick="nextAnswer()">
+                <img id="option-3" class="img-fluid" src="" alt="img">
+            </div>
+            <div class="col-12 col-sm-6 p-1 d-flex justify-content-sm-start justify-content-center" onclick="nextAnswer()">
+                <img id="option-4" class="img-fluid" src="" alt="img">
+            </div>
+        </div>
+    </div>
+
+    <div id="result-container"></div>
+
+
+
+    <img id="paraguas" class="paraguas"src="src/paraguas.png" alt="paraguas">
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

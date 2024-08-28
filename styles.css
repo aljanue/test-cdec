@@ -1,0 +1,89 @@
+body {
+    background-image: url("src/background.jpeg");
+    background-color: #cccccc;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height:100vh;
+    overflow: hidden;
+}
+*{
+    font-family: "Imprima";
+    text-align: center;
+    font-weight: 400;
+}
+.logo{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 142px;
+    height: auto;
+}
+.main-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 80%;
+    min-width: 37%;
+    width: 400px;
+    height: fit-content;
+    gap: 20px;
+    margin-bottom: 150px;
+    position: absolute;
+    z-index: 9999
+}
+.main-container button{
+    width: 225px;
+    background-color: #E45F5F;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50px;
+    font-size: 1.2rem !important;
+}
+.paraguas{
+    position:absolute;
+    bottom: -25%;
+    width: 700px;
+    height: auto;
+    transition: all ease 2s;
+}
+.paraguas2{
+    transform: translateX(50vw) translateY(-50vh)  scale(0.6) rotate(-25deg);
+}
+.paraguas3{
+    transform: translateY(-98vh) scale(1) rotate(210deg);
+}
+@media (max-width: 767.98px) {
+    .paraguas {
+        width: 400px; 
+        bottom: -15%;
+    }
+}
+
+#test-container{
+    display: none;
+    width: 70%;
+    background-color: white;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    max-height: 70vh;
+    overflow-y:auto;
+}
+#question{
+    font-size: 1.6rem !important;
+    text-align: center;
+    width: 100%;
+    font-family: "Imprima";
+}
+.img-fluid{
+    max-height: 20vh;
+    cursor: pointer;
+}
+
+#result-container{
+    max-width: 90%;
+
+}
