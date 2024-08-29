@@ -141,7 +141,9 @@ body {
 
 #result-container, #mail-container{
     position: relative;
-    width: 70%;
+    max-width: 90vw;
+    min-width: 50vw;
+    width: 700px;
     background-color: white;
     display:none;
     display: column;
