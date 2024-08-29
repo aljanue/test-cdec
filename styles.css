@@ -247,7 +247,7 @@ body {
     background-color: white;
     justify-content: space-between;
     align-items: center;
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 20vh 30px;
     gap: 10px;
