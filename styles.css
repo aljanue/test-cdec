@@ -195,6 +195,18 @@ body {
     position: absolute;
     top: 120%;
 }
+.float-logo{
+    position: absolute;
+    margin: 1vw;
+    opacity: 0.6;
+    width: calc(50vw - 400px) !important;
+}
+.float-logo-1{
+    left: 100%;
+}
+.float-logo-2{
+    right: 100%;
+}
 
 #mail-container form{
     display: flex;
