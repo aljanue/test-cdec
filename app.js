@@ -57,15 +57,15 @@ const questions = [
         options: [
             {
                 url: "/src/images/mar.jpg",
-                puntuation: 0.12
+                puntuation: 2
             },
             {
                 url: "/src/images/pedro.jpg",
-                puntuation: 0.65
+                puntuation: 2
             },
             {
                 url: "/src/images/pol.jpg",
-                puntuation: 0.43
+                puntuation: 2
             },
             {
                 url: "/src/images/mariola.jpg",
