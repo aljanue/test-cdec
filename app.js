@@ -14,15 +14,15 @@ const questions = [
         question: "¿Dónde preferirías hacer un freetour?",
         options: [
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images/roma.jpg",
                 puntuation: 0.42
             },
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images/paris.jpg",
                 puntuation: 1.19
             },
             {
-                url: "/src/images/paris.jpeg",
+                url: "/src/images/cannes.jpg",
                 puntuation: 0.81
             },
             {
@@ -56,19 +56,19 @@ const questions = [
         question: "¿Con qué exturista harías dupla creativa?",
         options: [
             {
-                url: "/src/images",
+                url: "/src/images/mar.jpg",
                 puntuation: 0.12
             },
             {
-                url: "/src/images",
+                url: "/src/images/pedro.jpg",
                 puntuation: 0.65
             },
             {
-                url: "/src/images",
+                url: "/src/images/pol.jpg",
                 puntuation: 0.43
             },
             {
-                url: "/src/images",
+                url: "/src/images/mariola.jpg",
                 puntuation: 2
             },
         ]
@@ -77,19 +77,19 @@ const questions = [
         question: "¿Cuál es la cocina de tus sueños?",
         options: [
             {
-                url: "/src/images",
+                url: "/src/images/campestre.jpg",
                 puntuation: 0.2
             },
             {
-                url: "/src/images",
+                url: "/src/images/moderna.jpg",
                 puntuation: 1.1
             },
             {
-                url: "/src/images",
+                url: "/src/images/beige.jpg",
                 puntuation: 0.3
             },
             {
-                url: "/src/images",
+                url: "/src/images/kitchen.jpg",
                 puntuation: 1.9
             },
         ]
@@ -98,19 +98,19 @@ const questions = [
         question: "¿Qué Housetour preferirías ver? ",
         options: [
             {
-                url: "/src/images",
+                url: "/src/images/ibai.jpg",
                 puntuation: 0.42
             },
             {
-                url: "/src/images",
+                url: "/src/images/lolalolita.jpg",
                 puntuation: 1.19
             },
             {
-                url: "/src/images",
+                url: "/src/images/maria.jpg",
                 puntuation: 0.81
             },
             {
-                url: "/src/images",
+                url: "/src/images/cdec.jpg",
                 puntuation: 2
             },
         ]
@@ -152,17 +152,16 @@ function showResult(container){
     nextContainer(container, "result-container");
     document.getElementById("result").textContent=result.toFixed(1)+'%';
 }
-function goBack(container){
-    nextContainer(container, "home-container");
-    puntuation = 0;
-}
 function nextAnswer(){
     current_answer++;
     if(current_answer < questions.length)
         showAnswer();
     else{
-        showResult('test-container');
+        nextContainer('test-container', 'loading-result');
         moveSticker(2);
+        setTimeout(function() {
+            showResult('loading-result');
+        }, 3000);
     }
 }
 

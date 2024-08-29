@@ -84,6 +84,7 @@ body {
         max-height: 80vh;
         overflow-y: auto;
         align-items: start;
+        justify-content: start;
     }
     #result-container h1{
         position:static !important;
@@ -98,11 +99,18 @@ body {
     }
 
     #result-container a{
-        top: 110% !important;
-        z-index:9999999999;
+        position: static !important;
+        color: black !important;
     }
     #result-container button{
         position: static !important;
+    }
+    #mail-container div{
+        position: static !important;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        margin-top:0 !important;
     }
 }
 
@@ -217,11 +225,53 @@ body {
 #mail-container div{
     position: absolute;
     left: 0;
-    top: 40px;
-    padding: 30px 40px;
+    top: 00px;
+    margin: 25px 25px;
     cursor: pointer;
+    height: fit-content;
 }
 #mail-container div svg{
-    width: 80px;
-    fill: rgb(28, 28, 110)
+    width: 50px;
+    height: 50px;
+    fill: rgba(0, 0, 0, 0.442)
 }
+
+
+#loading-result{
+    max-width: 90vw;
+    min-width: 50vw;
+    width: 700px;
+    height: 65vh;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    padding: 20vh 30px;
+    gap: 10px;
+    position: relative;
+    font-family: "Creativa";
+}
+#loading-result img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    width: 100px;
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 50px;
+    aspect-ratio: 1;
+    --_c:no-repeat radial-gradient(farthest-side,#E45F5F 92%,#0000);
+    background: 
+      var(--_c) top,
+      var(--_c) left,
+      var(--_c) right,
+      var(--_c) bottom;
+    background-size: 12px 12px;
+    animation: l7 1s infinite;
+  }
+  @keyframes l7 {to{transform: rotate(.5turn)}}
