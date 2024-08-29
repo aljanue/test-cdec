@@ -247,7 +247,7 @@ body {
     background-color: white;
     justify-content: space-between;
     align-items: center;
-    display: none;
+    display: flex;
     flex-direction: column;
     padding: 20vh 30px;
     gap: 10px;
@@ -257,7 +257,7 @@ body {
 #loading-result img{
     position: absolute;
     bottom: 0;
-    right: calc(50% - 80px);
+    right: calc(50% - 100px);
     margin: 20px;
     width: 160px;
 }
